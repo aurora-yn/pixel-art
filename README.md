@@ -1,12 +1,12 @@
 # Simple Pixel Art
-Draw a mini painting by picking any colours at the penal.
+Draw a mini painting by picking any colours at the palette.
 
 ---
 
 ## Structure
 - **App** -> ColorPicker and Canvas
-- **ColorPicker** -> *Colors* and Pixel
-- **Colors** -> just list of colors able to pick
+- **ColorPicker** -> *Colors* and Pixel as a palette
+- **Colors** -> The list of colors able to pick
 - **Pixel** -> props.background, props.current, props.onClick
 - **Canvas** -> Pixel
 
@@ -14,10 +14,10 @@ Draw a mini painting by picking any colours at the penal.
 Repeat row and col to draw a canvas
 ```
 const [matrix, setMatrix] = useState(
-    Array(20).fill().map(() => 
-      Array(20).fill(0)
-    )
+  Array(20).fill().map(() => 
+    Array(20).fill(0)
   )
+)
 ```
 
 Change for each pixel's color when it is selected
